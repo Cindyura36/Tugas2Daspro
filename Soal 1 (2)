@@ -16,18 +16,18 @@ begin
 
     else if (totalBelanja >= 100000) and (totalBelanja <= 499999) then
     begin
-        totalBayar := totalBelanja * 0.9;  //untuk diskon 10%
+        totalBayar := totalBelanja * 0.9;
         writeln('Kamu mendapatkan diskon 10%');
     end
 
     else if (totalBelanja >= 500000) and (totalBelanja <= 999999) then
     begin 
-        totalBayar := totalBelanja * 0.8;  //untnuk diskon 20%
+        totalBayar := totalBelanja * 0.8;
         writeln('Kamu mendapatkan diskon 20%');
     end
     else
     begin
-        totalBayar := totalBelanja * 0.7;  //untuk diskon 30%
+        totalBayar := totalBelanja * 0.7;
         writeln('Kaamu mendapatkan diskon 30%');
     end;
 
