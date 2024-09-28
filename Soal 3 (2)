@@ -1,1 +1,48 @@
+program kalkulatorsederhana;
+uses crt;
+var
+    pilihan : integer;
+    angka1, angka2, hasil : real;
 
+begin
+    clrscr;
+    writeln('Pilihan operasi matematika :');
+    writeln('1. Penjumlahan');
+    writeln('2. Pengurangan');
+    writeln('3. Perkalian');
+    writeln('4. Pembagian');
+    writeln('Masukkan pilihan (1-4) : ');
+    readln(pilihan);
+
+    writeln('Masukkan angka pertama : '); readln(angka1);
+    writeln('Masukkan angka kedua : '); readln(angka2);
+
+    case pilihan of
+        1: begin
+            hasil := angka1 + angka2;
+            writeln('Hasil penjumlahan : ', hasil:0:2);
+           end;
+
+        2: begin
+            hasil := angka1 - angka2;
+            writeln('Hasil pengurangan : ', hasil:0:2);
+           end;
+
+        3: begin
+            hasil := angka1 * angka2;
+            writeln('Hasil perkalian : ', hasil:0:2);
+           end;
+
+        4: begin
+            if angka2 <> 0 then
+            begin
+                    hasil := angka1/angka2;
+                    writeln('Hasil pembagian: ', hasil:0:2);
+            end
+            else
+                writeln('Pembagian dengan nol tidak diperbolehkan');
+            end;
+    else
+        writeln('Pilihan tidak valid');
+    end;
+end.
