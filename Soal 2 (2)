@@ -1,1 +1,33 @@
+program konversisuhu;
+uses crt;
+var
+    suhu : real;
 
+begin
+    clrscr;
+    writeln('Masukkan suhu dalam kondisi Celcius : '); readln(suhu);
+    
+    if suhu < 0 then
+    begin
+        writeln('Cuaca sangat dingin... Jangan lupa pakai jaket tebal!');
+    end
+
+    else if (suhu >= 0) and (suhu <= 15) then
+    begin
+        writeln('Cuaca dingin, pakai jaket ya~');
+    end
+
+    else if (suhu >= 16) and (suhu <= 25) then
+    begin
+        writeln('Cuaca nyaman, cocok untuk jalan-jalan, nih');
+    end
+
+    else if (suhu >= 26) and (suhu <= 35) then
+    begin
+        writeln('Cuacanya lagi hangat, tetap terhidrasi, oke');
+    end
+    else
+    begin
+        writeln('Wah, cuacanya sangat panas, harus hindari sinar matahari langung, lho');
+    end;
+end.
