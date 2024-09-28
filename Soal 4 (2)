@@ -1,1 +1,52 @@
+program PerubahanSuhu;
+uses crt;
+var
+    pilihan : integer;
+    suhu, hasil : real;
 
+begin
+    clrscr;
+    writeln('Pilih suhu yang ingin di rubah : ');
+    writeln('1. Celcius ke Fahrenheit');
+    writeln('2. Fahrenheit ke Celcius');
+    writeln('3. Celcius ke Kelvin');
+    writeln('4. Kelvin ke Celcius');
+    writeln('Masukkan pilihan (1-4) : ');
+    readln(pilihan);
+
+    if (pilihan = 1) then
+    begin
+        writeln('Masukkan suhu dalam Celcius : ');
+        readln(suhu);
+        hasil := suhu * 9/5 + 32;
+        writeln('Hasil konvenrsi : ', hasil:0:2, ' F');
+    end
+
+    else if (pilihan = 2) then
+    begin
+        writeln('Masukkan suhu dalam Fahrenheit : ');
+        readln(suhu);
+        hasil := suhu - 32 * 5/9;
+        writeln('Hasil konversi : ', hasil:0:2, ' C');
+    end
+
+    else if (pilihan = 3) then
+    begin
+        writeln('Masukkan suhu dalam Celcius : ');
+        readln(suhu);
+        hasil := suhu + 273;
+        writeln('Hasil konversi : ', hasil:0:2, ' K');
+    end
+
+    else if (pilihan = 4) then
+    begin
+        writeln('Masukkan suhu dalam kelvin : ');
+        readln(suhu);
+        hasil := suhu - 273;
+        writeln('Hasil konversi : ', hasil:0:2, ' C');
+    end
+    else
+    begin
+        writeln('Pilihan tidak terdefinisi');
+    end;
+end.
